@@ -17,5 +17,38 @@ function array_All(num){
    
 }
 
- var array=[22,44,3,44,7,6,88,33];
-    console.log(array_All(array));
+var array=[22,44,3,44,7,6,88,33];
+console.log(array_All(array));
+
+
+
+
+
+ //call back function
+    console.log("----call back function-------");
+   
+
+    function callBack(name,age,task){
+
+    console.log(name);
+    console.log(age);
+    task();
+
+    }
+
+    function goHome()
+    {
+        console.log("go to ur home");
+    }
+
+    function sleep()
+    {
+        console.log("sleep now");
+
+    }
+
+    var Name="misu";
+    var Age=11;
+    callBack(Name,Age, goHome);
+    callBack('mita',10, sleep);
+
