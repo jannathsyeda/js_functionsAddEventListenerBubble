@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event explore</title>
+</head>
+<body>
+    <!-- //event handling -->
+
+<h1>Event Exploring</h1>
+ <button  onclick="alert('47')">click me for alert</button> 
+<button onclick="handleClick()">check console</button>
+<button onmousedown="handleClick2()">mousedown console ck</button>
+
+
+<!-- //addEventListener -->
+
+<h1>addEventListener explore</h1>
+<button id="fist-button">1st</button>
+
+<button id="second">2nd</button>
+
+<button id="third">3rd</button>
+
+
+
+<script>
+    //event handling
+
+    function handleClick(){
+        console.log('This is a event Function');
+    }
+    function handleClick2(){
+        console.log('This is a event Function2');
+    }
+
+    //addEventListener
+//1st way
+    // function handleButtonClick()
+    // {
+    //     document.body.style.backgroundColor ='tomato';
+    // }
+    // const firstB = document.getElementById('first-button');
+    // firstB,addEventListener('click', handleButtonClick )
+
+
+//2nd way 
+document.getElementById('first-button').addEventListener('click', function(){
+    document.body.style.backgroundColor ='tomato';
+})
+</script>
+
+
+</body>
+</html>

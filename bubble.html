@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubble</title>
+</head>
+<body>
+    <!-- --shortcut --- -->
+    <!-- div.container>ul.ul-item>li.item*5>lorem10 -->
+        <div id="firstDiv" class="container">
+            <h1>BUBBLE Explore</h1>
+            <ul id="ulAll" class="ul-item">
+                <li  id="liOne" class="item-one">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, quae.</li>
+                <li class="item">Quisquam iure molestiae natus consectetur itaque atque eligendi deleniti accusantium.</li>
+                <li class="item">Nobis amet officia deleniti cupiditate culpa, voluptate corporis eligendi accusantium.</li>
+                <li class="item">Suscipit sint recusandae possimus amet hic quod veritatis magni aperiam!</li>
+                <li class="item">Repellendus vel cumque debitis neque impedit labore minus voluptas aperiam.</li>
+            </ul>
+        </div>
+<script>
+    document.getElementById('firstDiv').addEventListener('click', function(){
+        console.log('log me first,I am in container');
+
+    })
+
+    document.getElementById('ulAll').addEventListener('click', function(){
+        console.log('I am ul log in side container');
+    })
+
+    document.getElementById('liOne').addEventListener('click', function(){
+        console.log('I am liOne inside ul');
+        document.getElementById('liOne').style.color="green";
+    })
+    document.getElementById('ulAll').style.color="red";
+</script>
+
+
+<!-- Q: What is the event bubble?
+Ans-propagrating an event from the lowest to the upper -->
+</body>
+</html>
