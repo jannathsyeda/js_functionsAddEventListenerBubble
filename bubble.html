@@ -26,11 +26,14 @@
 
     document.getElementById('ulAll').addEventListener('click', function(){
         console.log('I am ul log in side container');
+        event.stopPropagation();
+       
     })
 
     document.getElementById('liOne').addEventListener('click', function(){
         console.log('I am liOne inside ul');
         document.getElementById('liOne').style.color="green";
+        event.stopImmediatePropagation();
     })
     document.getElementById('ulAll').style.color="red";
 </script>
@@ -38,5 +41,15 @@
 
 <!-- Q: What is the event bubble?
 Ans-propagrating an event from the lowest to the upper -->
+//stop bubble in two way
+1st way,
+event.stopPropagation()->stop  bubble up.
+event.stopImmediatePropagation()->stop all bubble and event handellar.
+//event.target
+j element ke click kora hoise takey access korar jonno event.target use kora hoy
+
+
+
+
 </body>
 </html>

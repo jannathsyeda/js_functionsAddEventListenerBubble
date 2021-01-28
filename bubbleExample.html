@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+         <div class="container">
+             <h1>add and remove item with bubble </h1>
+             <ul id="ul-item">
+                 <li id="first" class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, excepturi?</li>
+                 <li class="item">Minus ipsum ut, reiciendis eveniet libero blanditiis doloribus distinctio modi!</li>
+                 <li class="item">Consequatur dolores cumque, dolore temporibus modi ea hic totam esse.</li>
+                 <li class="item">Ut, dignissimos. Consequatur enim nisi inventore tempora fuga. Ratione, laboriosam.</li>
+                 <li class="item">Quod aperiam saepe cumque quidem sit ad repudiandae ea minima.</li>
+             </ul>
+             <button id="addNew"> add item</button>
+         </div>
+<script>
+        //  var items = document.getElementsByClassName('item');
+        //  for (let i = 0; i < items.length; i++) {
+        //      var item = items[i];
+        //      item.addEventListener('click', function(event){
+        //          event.target.parentNode.removeChild(event.target);
+        //      })
+             
+        //  }    
+
+         document.getElementById('addNew').addEventListener('click',function(event){
+             var itemParent=document.getElementById('ul-item');
+             var newItem=document.createElement('li');
+             newItem.innerText ='NEW item';
+             itemParent.appendChild(newItem);
+
+
+         })
+
+         document.getElementById('ul-item').addEventListener('click',function(event){
+            event.target.parentNode.removeChild(event.target);
+
+         })
+
+</script>
+
+</body>
+</html>
